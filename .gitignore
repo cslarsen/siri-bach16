@@ -1,8 +1,10 @@
 *.aux
-*.log
-*.pdf
-*.toc
 *.bbl
 *.blg
+*.idx
+*.log
 *.out
-antallord.tex
+*.pdf
+*.toc
+*.ilg
+*.ind

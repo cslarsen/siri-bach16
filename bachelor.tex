@@ -1,4 +1,4 @@
-\documentclass[a4paper,norsk,12pt]{report}
+\documentclass[a4paper,norsk,12pt,twoside]{report}
 \include{preamble}
 
 \begin{document}
@@ -25,8 +25,19 @@
   \begingroup % left-justify
   \raggedright % left-justify
   \nocite{*} % show all refs
+  \phantomsection
   \bibliography{referanser}
   \bibliographystyle{apacite} % APA-style citations
   \endgroup % left-justify
 
+  \appendix
+  % Because of hyperref/makeidx/toc bug, we have to insert anchors
+  % ourselves here.  See
+  % http://tex.stackexchange.com/questions/138903/wrong-hyperref-for-index-in-tableofcontents-since-texlive-2010
+  %
+  \clearpage % may not be needed with imakeidx
+  \phantomsection % may not be needed with imakeidx
+  % Also add to ToC
+  \addcontentsline{toc}{chapter}{Index}
+  \printindex
 \end{document}

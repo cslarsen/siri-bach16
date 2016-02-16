@@ -14,9 +14,20 @@
 % Fixes accidentally hitting alt+shift+space on OSX.
 \DeclareUnicodeCharacter{00A0}{ }
 
-% tankestrek
+% Tankestrek
 \newcommand{\strek}{\textthreequartersemdash}
 
 % 1.5 linjespace
 \usepackage{setspace}
 \onehalfspacing
+
+% For TODOs
+\usepackage[backgroundcolor=white,linecolor=red,bordercolor=red]{todonotes}
+
+% Build index, using the new imakeidx in TeX Live, see
+% http://tex.blogoverflow.com/2012/09/dont-forget-to-run-makeindex/
+\usepackage{imakeidx}
+\makeindex
+
+% Above/below refs
+\usepackage{varioref}
