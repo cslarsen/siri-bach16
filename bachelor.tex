@@ -1,0 +1,27 @@
+\documentclass[a4paper,norsk,12pt]{report}
+\include{preamble}
+
+\begin{document}
+  \author{Siri Stigen}
+  \date{2016}
+  \title{Bacheloroppgave Sykepleie}
+
+  %\includepdf[pages={1}]{forside.pdf}
+  \tableofcontents
+  \pagenumbering{gobble}% Remove page numbers (and reset to 1)
+
+  \clearpage
+  \pagenumbering{arabic}
+
+  \phantomsection % add hyperref anchor
+  \input{tekst}
+  \clearpage
+
+  \begingroup % left-justify
+  \raggedright % left-justify
+  \nocite{*} % show all refs
+  \bibliography{referanser}
+  \bibliographystyle{apacite} % APA-style citations
+  \endgroup % left-justify
+
+\end{document}
