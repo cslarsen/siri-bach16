@@ -2,9 +2,12 @@
 *.bbl
 *.blg
 *.idx
+*.ilg
+*.ind
 *.log
 *.out
 *.pdf
 *.toc
-*.ilg
-*.ind
+GPATH
+GRTAGS
+GTAGS
