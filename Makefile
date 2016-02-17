@@ -26,4 +26,4 @@ all:
 	$(PDFLATEX) $(MAIN).tex
 
 clean:
-	rm -f *.aux *.log $(MAIN).pdf *.toc *.bbl *.blg *.out
+	rm -f *.aux *.log $(MAIN).pdf *.toc *.bbl *.blg *.out *.idx *.ilg *.ind GRTAGS GPATH GTAGS
