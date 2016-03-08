@@ -23,7 +23,7 @@ antallord.tex: [1-9]-*.tex tabell-artikler.tex
 	wc -w $^ | awk 'END{print $$1;}' > $@
 
 spell:
-	aspell --lang=no -c tekst.tex
+	aspell --lang=no -c [0-9]-*.tex tabell*.tex vedlegg*.tex
 
 all: antallord.tex
 	$(PDFLATEX) $(MAIN).tex
