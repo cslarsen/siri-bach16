@@ -2,18 +2,16 @@
 \include{preamble}
 
 \begin{document}
-  \author{
-    Eikeland, Trine\\
-    Klungland, Marianne\\
-    Stigen, Siri\\
-  }
+  \author{Eikeland, Trine\\Klungland, Marianne\\Stigen, Siri}
   \title{Humoristisk alvor i kreftomsorgen \\
     {\Huge{\sffamily *** UTKAST ***}}}
 
+  %\includepdf[pages={1}]{annet/forside.pdf}
   \maketitle
-  \input{abstract}
+  \begin{abstract}
+  \input{0-sammendrag}
+  \end{abstract}
 
-  %\includepdf[pages={1}]{forside.pdf}
   \tableofcontents
   \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
@@ -21,7 +19,13 @@
   \pagenumbering{arabic}
 
   \phantomsection % add hyperref anchor
-  \input{tekst}
+  \input{1-innledning}
+  \input{2-teori}
+  \input{3-metode}
+  \input{4-resultat}
+  \input{5-diskusjon}
+  \input{6-anvendelse}
+  \input{7-avslutning}
   \clearpage
 
   \begingroup % left-justify

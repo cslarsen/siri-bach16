@@ -16,14 +16,20 @@ open: all
 
 .PHONY:
 
+ord:
+	wc -w [1-9]-*.tex tabell-artikler.tex
+
+antallord.tex: [1-9]-*.tex tabell-artikler.tex
+	wc -w $^ | awk 'END{print $$1;}' > $@
+
 spell:
 	aspell --lang=no -c tekst.tex
 
-all:
+all: antallord.tex
 	$(PDFLATEX) $(MAIN).tex
 	$(BIBTEX) $(MAIN)
 	$(PDFLATEX) $(MAIN).tex
 	$(PDFLATEX) $(MAIN).tex
 
 clean:
-	rm -f *.aux *.log $(MAIN).pdf *.toc *.bbl *.blg *.out *.idx *.ilg *.ind GRTAGS GPATH GTAGS
+	rm -f antallord.tex *.aux *.log $(MAIN).pdf *.toc *.bbl *.blg *.out *.idx *.ilg *.ind GRTAGS GPATH GTAGS
