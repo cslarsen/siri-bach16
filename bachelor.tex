@@ -15,12 +15,13 @@
   \tableofcontents
   \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
+  Antall ord: \input{antallord.tex}
   \clearpage
   \pagenumbering{arabic}
 
   % Table tricks from
   % https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf
-  \renewcommand{\arraystretch}{1.2} (or 1.3)
+  \renewcommand{\arraystretch}{1.2}
 
   \phantomsection % add hyperref anchor
   \input{1-innledning}
