@@ -1,6 +1,9 @@
 \usepackage[norsk]{babel}
 \usepackage[utf8]{inputenc}
 
+% Kortere marginer
+\usepackage[a4paper, margin=3cm]{geometry}
+
 % Latin1 Times Roman font for Norwegian
 \usepackage{times}
 \usepackage[T1]{fontenc}
@@ -30,9 +33,9 @@
 \usepackage{varioref}
 
 % Fjern "Kapittel" i kapitler
-%\usepackage{titlesec}
-%\titleformat{\chapter}[display]
-  %{\normalfont\bfseries}{}{0pt}{\Huge}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
 
 \usepackage{tabularx}
 \usepackage{graphicx}
