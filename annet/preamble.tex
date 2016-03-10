@@ -38,5 +38,11 @@
 \usepackage{graphicx}
 \usepackage{pdflscape}
 \usepackage{booktabs}
-\usepackage[autostyle,norwegian=guillemets]{csquotes}
 \usepackage{ltablex}
+
+% Quotation, make it smaller for >3 lines
+\usepackage[autostyle,norwegian=guillemets]{csquotes}
+\newenvironment*{smallquote}
+  {\quote\small}
+  {\endquote}
+\SetBlockEnvironment{smallquote}
