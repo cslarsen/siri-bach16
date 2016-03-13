@@ -5,6 +5,7 @@
 *.ilg
 *.ind
 *.log
+*.lot
 *.out
 *.pdf
 *.toc
